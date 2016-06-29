@@ -1,0 +1,1589 @@
+{
+  "name": "/", 
+  "links": {
+    "B-C": 9842, 
+    "E-F": 7514, 
+    "B-D": 4983, 
+    "D-F": 7491, 
+    "B-E": 4992, 
+    "C-F": 12355, 
+    "A-B": 12229
+  }, 
+  "self_counter": 0, 
+  "entireName": "/", 
+  "counter": 59406, 
+  "children": [
+    {
+      "entireName": "/net", 
+      "counter": 803, 
+      "children": [
+        {
+          "entireName": "/net/site", 
+          "counter": 50, 
+          "children": [
+            {
+              "entireName": "/net/site/A", 
+              "counter": 2, 
+              "children": [
+                {
+                  "entireName": "/net/site/A/NLSR", 
+                  "counter": 2, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "A-B": 2
+                      }, 
+                      "self_counter": 1, 
+                      "counter": 2, 
+                      "entireName": "/net/site/A/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/A/NLSR/INFO/%07%0E%08%03net%08%04site%08%01B", 
+                          "counter": 1, 
+                          "name": "%07%0E%08%03net%08%04site%08%01B", 
+                          "links": {
+                            "A-B": 1
+                          }, 
+                          "self_counter": 1
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "A-B": 2
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "A-B": 2
+              }, 
+              "name": "A"
+            }, 
+            {
+              "entireName": "/net/site/B", 
+              "counter": 16, 
+              "children": [
+                {
+                  "entireName": "/net/site/B/NLSR", 
+                  "counter": 16, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "B-C": 2, 
+                        "A-B": 6, 
+                        "B-D": 4, 
+                        "B-E": 4
+                      }, 
+                      "self_counter": 8, 
+                      "counter": 16, 
+                      "entireName": "/net/site/B/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/B/NLSR/INFO/%07%0E%08%03net%08%04site%08%01A", 
+                          "counter": 3, 
+                          "name": "%07%0E%08%03net%08%04site%08%01A", 
+                          "links": {
+                            "A-B": 3
+                          }, 
+                          "self_counter": 3
+                        }, 
+                        {
+                          "entireName": "/net/site/B/NLSR/INFO/%07%0E%08%03net%08%04site%08%01C", 
+                          "counter": 1, 
+                          "name": "%07%0E%08%03net%08%04site%08%01C", 
+                          "links": {
+                            "B-C": 1
+                          }, 
+                          "self_counter": 1
+                        }, 
+                        {
+                          "entireName": "/net/site/B/NLSR/INFO/%07%0E%08%03net%08%04site%08%01D", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01D", 
+                          "links": {
+                            "B-D": 2
+                          }, 
+                          "self_counter": 2
+                        }, 
+                        {
+                          "entireName": "/net/site/B/NLSR/INFO/%07%0E%08%03net%08%04site%08%01E", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01E", 
+                          "links": {
+                            "B-E": 2
+                          }, 
+                          "self_counter": 2
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "B-C": 2, 
+                    "A-B": 6, 
+                    "B-D": 4, 
+                    "B-E": 4
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "B-C": 2, 
+                "A-B": 6, 
+                "B-D": 4, 
+                "B-E": 4
+              }, 
+              "name": "B"
+            }, 
+            {
+              "entireName": "/net/site/C", 
+              "counter": 6, 
+              "children": [
+                {
+                  "entireName": "/net/site/C/NLSR", 
+                  "counter": 6, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "B-C": 2, 
+                        "C-F": 4
+                      }, 
+                      "self_counter": 3, 
+                      "counter": 6, 
+                      "entireName": "/net/site/C/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/C/NLSR/INFO/%07%0E%08%03net%08%04site%08%01B", 
+                          "counter": 1, 
+                          "name": "%07%0E%08%03net%08%04site%08%01B", 
+                          "links": {
+                            "B-C": 1
+                          }, 
+                          "self_counter": 1
+                        }, 
+                        {
+                          "entireName": "/net/site/C/NLSR/INFO/%07%0E%08%03net%08%04site%08%01F", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01F", 
+                          "links": {
+                            "C-F": 2
+                          }, 
+                          "self_counter": 2
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "B-C": 2, 
+                    "C-F": 4
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "B-C": 2, 
+                "C-F": 4
+              }, 
+              "name": "C"
+            }, 
+            {
+              "entireName": "/net/site/D", 
+              "counter": 8, 
+              "children": [
+                {
+                  "entireName": "/net/site/D/NLSR", 
+                  "counter": 8, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "D-F": 4, 
+                        "B-D": 4
+                      }, 
+                      "self_counter": 4, 
+                      "counter": 8, 
+                      "entireName": "/net/site/D/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/D/NLSR/INFO/%07%0E%08%03net%08%04site%08%01B", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01B", 
+                          "links": {
+                            "B-D": 2
+                          }, 
+                          "self_counter": 2
+                        }, 
+                        {
+                          "entireName": "/net/site/D/NLSR/INFO/%07%0E%08%03net%08%04site%08%01F", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01F", 
+                          "links": {
+                            "D-F": 2
+                          }, 
+                          "self_counter": 2
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "D-F": 4, 
+                    "B-D": 4
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "D-F": 4, 
+                "B-D": 4
+              }, 
+              "name": "D"
+            }, 
+            {
+              "entireName": "/net/site/E", 
+              "counter": 8, 
+              "children": [
+                {
+                  "entireName": "/net/site/E/NLSR", 
+                  "counter": 8, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "E-F": 4, 
+                        "B-E": 4
+                      }, 
+                      "self_counter": 4, 
+                      "counter": 8, 
+                      "entireName": "/net/site/E/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/E/NLSR/INFO/%07%0E%08%03net%08%04site%08%01B", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01B", 
+                          "links": {
+                            "B-E": 2
+                          }, 
+                          "self_counter": 2
+                        }, 
+                        {
+                          "entireName": "/net/site/E/NLSR/INFO/%07%0E%08%03net%08%04site%08%01F", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01F", 
+                          "links": {
+                            "E-F": 2
+                          }, 
+                          "self_counter": 2
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "E-F": 4, 
+                    "B-E": 4
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "E-F": 4, 
+                "B-E": 4
+              }, 
+              "name": "E"
+            }, 
+            {
+              "entireName": "/net/site/F", 
+              "counter": 10, 
+              "children": [
+                {
+                  "entireName": "/net/site/F/NLSR", 
+                  "counter": 10, 
+                  "children": [
+                    {
+                      "name": "INFO", 
+                      "links": {
+                        "C-F": 2, 
+                        "E-F": 4, 
+                        "D-F": 4
+                      }, 
+                      "self_counter": 5, 
+                      "counter": 10, 
+                      "entireName": "/net/site/F/NLSR/INFO", 
+                      "children": [
+                        {
+                          "entireName": "/net/site/F/NLSR/INFO/%07%0E%08%03net%08%04site%08%01C", 
+                          "counter": 1, 
+                          "name": "%07%0E%08%03net%08%04site%08%01C", 
+                          "links": {
+                            "C-F": 1
+                          }, 
+                          "self_counter": 1
+                        }, 
+                        {
+                          "entireName": "/net/site/F/NLSR/INFO/%07%0E%08%03net%08%04site%08%01D", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01D", 
+                          "links": {
+                            "D-F": 2
+                          }, 
+                          "self_counter": 2
+                        }, 
+                        {
+                          "entireName": "/net/site/F/NLSR/INFO/%07%0E%08%03net%08%04site%08%01E", 
+                          "counter": 2, 
+                          "name": "%07%0E%08%03net%08%04site%08%01E", 
+                          "links": {
+                            "E-F": 2
+                          }, 
+                          "self_counter": 2
+                        }
+                      ]
+                    }
+                  ], 
+                  "links": {
+                    "C-F": 2, 
+                    "E-F": 4, 
+                    "D-F": 4
+                  }, 
+                  "name": "NLSR"
+                }
+              ], 
+              "links": {
+                "C-F": 2, 
+                "E-F": 4, 
+                "D-F": 4
+              }, 
+              "name": "F"
+            }
+          ], 
+          "links": {
+            "B-C": 4, 
+            "E-F": 8, 
+            "B-D": 8, 
+            "D-F": 8, 
+            "B-E": 8, 
+            "C-F": 6, 
+            "A-B": 8
+          }, 
+          "name": "site"
+        }, 
+        {
+          "entireName": "/net/NLSR", 
+          "counter": 753, 
+          "children": [
+            {
+              "name": "sync", 
+              "links": {
+                "B-C": 63, 
+                "E-F": 64, 
+                "B-D": 63, 
+                "D-F": 62, 
+                "B-E": 60, 
+                "C-F": 65, 
+                "A-B": 62
+              }, 
+              "self_counter": 346, 
+              "counter": 439, 
+              "entireName": "/net/NLSR/sync", 
+              "children": [
+                {
+                  "entireName": "/net/NLSR/sync/recovery", 
+                  "counter": 93, 
+                  "name": "recovery", 
+                  "links": {
+                    "B-C": 14, 
+                    "E-F": 12, 
+                    "B-D": 13, 
+                    "D-F": 13, 
+                    "B-E": 13, 
+                    "C-F": 14, 
+                    "A-B": 14
+                  }, 
+                  "self_counter": 93
+                }
+              ]
+            }, 
+            {
+              "entireName": "/net/NLSR/LSA", 
+              "counter": 314, 
+              "children": [
+                {
+                  "entireName": "/net/NLSR/LSA/site", 
+                  "counter": 314, 
+                  "children": [
+                    {
+                      "entireName": "/net/NLSR/LSA/site/F", 
+                      "counter": 60, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 2, 
+                            "B-D": 4, 
+                            "D-F": 2, 
+                            "B-E": 4, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 20, 
+                          "entireName": "/net/NLSR/LSA/site/F/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/F/name/%01", 
+                              "counter": 9, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 2, 
+                                "D-F": 1, 
+                                "B-E": 2, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 9
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 2, 
+                            "B-D": 4, 
+                            "D-F": 2, 
+                            "B-E": 4, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 20, 
+                          "entireName": "/net/NLSR/LSA/site/F/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/F/adjacency/%01", 
+                              "counter": 9, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 2, 
+                                "D-F": 1, 
+                                "B-E": 2, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 9
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 2, 
+                            "B-D": 4, 
+                            "D-F": 2, 
+                            "B-E": 4, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 20, 
+                          "entireName": "/net/NLSR/LSA/site/F/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/F/coordinate/%01", 
+                              "counter": 9, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 2, 
+                                "D-F": 1, 
+                                "B-E": 2, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 9
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 9, 
+                        "E-F": 6, 
+                        "B-D": 12, 
+                        "D-F": 6, 
+                        "B-E": 12, 
+                        "C-F": 6, 
+                        "A-B": 9
+                      }, 
+                      "name": "F"
+                    }, 
+                    {
+                      "entireName": "/net/NLSR/LSA/site/B", 
+                      "counter": 42, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 1, 
+                            "D-F": 3, 
+                            "B-E": 1, 
+                            "C-F": 2, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 9, 
+                          "counter": 14, 
+                          "entireName": "/net/NLSR/LSA/site/B/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/B/name/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "A-B": 1, 
+                                "E-F": 1, 
+                                "D-F": 1, 
+                                "C-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 1, 
+                            "D-F": 3, 
+                            "B-E": 1, 
+                            "C-F": 2, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 9, 
+                          "counter": 14, 
+                          "entireName": "/net/NLSR/LSA/site/B/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/B/adjacency/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "A-B": 1, 
+                                "E-F": 1, 
+                                "D-F": 1, 
+                                "C-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 1, 
+                            "D-F": 3, 
+                            "B-E": 1, 
+                            "C-F": 2, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 9, 
+                          "counter": 14, 
+                          "entireName": "/net/NLSR/LSA/site/B/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/B/coordinate/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "A-B": 1, 
+                                "E-F": 1, 
+                                "D-F": 1, 
+                                "C-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 6, 
+                        "E-F": 9, 
+                        "B-D": 3, 
+                        "D-F": 9, 
+                        "B-E": 3, 
+                        "C-F": 6, 
+                        "A-B": 6
+                      }, 
+                      "name": "B"
+                    }, 
+                    {
+                      "entireName": "/net/NLSR/LSA/site/A", 
+                      "counter": 48, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 2, 
+                            "C-F": 3, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 16, 
+                          "entireName": "/net/NLSR/LSA/site/A/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/A/name/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 2, 
+                            "C-F": 3, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 16, 
+                          "entireName": "/net/NLSR/LSA/site/A/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/A/adjacency/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 2, 
+                            "C-F": 3, 
+                            "A-B": 2
+                          }, 
+                          "self_counter": 11, 
+                          "counter": 16, 
+                          "entireName": "/net/NLSR/LSA/site/A/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/A/coordinate/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 6, 
+                        "E-F": 9, 
+                        "B-D": 6, 
+                        "D-F": 6, 
+                        "B-E": 6, 
+                        "C-F": 9, 
+                        "A-B": 6
+                      }, 
+                      "name": "A"
+                    }, 
+                    {
+                      "entireName": "/net/NLSR/LSA/site/E", 
+                      "counter": 51, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 1, 
+                            "B-D": 3, 
+                            "D-F": 2, 
+                            "B-E": 2, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 17, 
+                          "entireName": "/net/NLSR/LSA/site/E/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/E/name/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "A-B": 1, 
+                                "C-F": 1, 
+                                "B-D": 1, 
+                                "B-E": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 2, 
+                            "B-D": 3, 
+                            "D-F": 3, 
+                            "B-E": 1, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 17, 
+                          "entireName": "/net/NLSR/LSA/site/E/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/E/adjacency/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 2, 
+                            "B-D": 3, 
+                            "D-F": 3, 
+                            "B-E": 1, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 17, 
+                          "entireName": "/net/NLSR/LSA/site/E/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/E/coordinate/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 7, 
+                        "E-F": 5, 
+                        "B-D": 9, 
+                        "D-F": 8, 
+                        "B-E": 4, 
+                        "C-F": 9, 
+                        "A-B": 9
+                      }, 
+                      "name": "E"
+                    }, 
+                    {
+                      "entireName": "/net/NLSR/LSA/site/C", 
+                      "counter": 56, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 3, 
+                            "D-F": 3, 
+                            "B-E": 3, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 19, 
+                          "entireName": "/net/NLSR/LSA/site/C/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/C/name/%01", 
+                              "counter": 7, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 1, 
+                                "D-F": 1, 
+                                "B-E": 1, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 7
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 2, 
+                            "E-F": 3, 
+                            "B-D": 4, 
+                            "D-F": 3, 
+                            "B-E": 3, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 20, 
+                          "entireName": "/net/NLSR/LSA/site/C/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/C/adjacency/%01", 
+                              "counter": 8, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 2, 
+                                "D-F": 1, 
+                                "B-E": 1, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 8
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 1, 
+                            "E-F": 3, 
+                            "B-D": 3, 
+                            "D-F": 3, 
+                            "B-E": 2, 
+                            "C-F": 2, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 17, 
+                          "entireName": "/net/NLSR/LSA/site/C/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/C/coordinate/%01", 
+                              "counter": 5, 
+                              "name": "%01", 
+                              "links": {
+                                "C-F": 1, 
+                                "A-B": 1, 
+                                "D-F": 1, 
+                                "B-D": 1, 
+                                "E-F": 1
+                              }, 
+                              "self_counter": 5
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 5, 
+                        "E-F": 9, 
+                        "B-D": 10, 
+                        "D-F": 9, 
+                        "B-E": 8, 
+                        "C-F": 6, 
+                        "A-B": 9
+                      }, 
+                      "name": "C"
+                    }, 
+                    {
+                      "entireName": "/net/NLSR/LSA/site/D", 
+                      "counter": 57, 
+                      "children": [
+                        {
+                          "name": "name", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 3, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 19, 
+                          "entireName": "/net/NLSR/LSA/site/D/name", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/D/name/%01", 
+                              "counter": 7, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 1, 
+                                "D-F": 1, 
+                                "B-E": 1, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 7
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "adjacency", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 3, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 19, 
+                          "entireName": "/net/NLSR/LSA/site/D/adjacency", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/D/adjacency/%01", 
+                              "counter": 7, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 1, 
+                                "D-F": 1, 
+                                "B-E": 1, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 7
+                            }
+                          ]
+                        }, 
+                        {
+                          "name": "coordinate", 
+                          "links": {
+                            "B-C": 3, 
+                            "E-F": 3, 
+                            "B-D": 2, 
+                            "D-F": 2, 
+                            "B-E": 3, 
+                            "C-F": 3, 
+                            "A-B": 3
+                          }, 
+                          "self_counter": 12, 
+                          "counter": 19, 
+                          "entireName": "/net/NLSR/LSA/site/D/coordinate", 
+                          "children": [
+                            {
+                              "entireName": "/net/NLSR/LSA/site/D/coordinate/%01", 
+                              "counter": 7, 
+                              "name": "%01", 
+                              "links": {
+                                "B-C": 1, 
+                                "E-F": 1, 
+                                "B-D": 1, 
+                                "D-F": 1, 
+                                "B-E": 1, 
+                                "C-F": 1, 
+                                "A-B": 1
+                              }, 
+                              "self_counter": 7
+                            }
+                          ]
+                        }
+                      ], 
+                      "links": {
+                        "B-C": 9, 
+                        "E-F": 9, 
+                        "B-D": 6, 
+                        "D-F": 6, 
+                        "B-E": 9, 
+                        "C-F": 9, 
+                        "A-B": 9
+                      }, 
+                      "name": "D"
+                    }
+                  ], 
+                  "links": {
+                    "B-C": 42, 
+                    "E-F": 47, 
+                    "B-D": 46, 
+                    "D-F": 44, 
+                    "B-E": 42, 
+                    "C-F": 45, 
+                    "A-B": 48
+                  }, 
+                  "name": "site"
+                }
+              ], 
+              "links": {
+                "B-C": 42, 
+                "E-F": 47, 
+                "B-D": 46, 
+                "D-F": 44, 
+                "B-E": 42, 
+                "C-F": 45, 
+                "A-B": 48
+              }, 
+              "name": "LSA"
+            }
+          ], 
+          "links": {
+            "B-C": 105, 
+            "E-F": 111, 
+            "B-D": 109, 
+            "D-F": 106, 
+            "B-E": 102, 
+            "C-F": 110, 
+            "A-B": 110
+          }, 
+          "name": "NLSR"
+        }
+      ], 
+      "links": {
+        "B-C": 109, 
+        "E-F": 119, 
+        "B-D": 117, 
+        "D-F": 114, 
+        "B-E": 110, 
+        "C-F": 116, 
+        "A-B": 118
+      }, 
+      "name": "net"
+    }, 
+    {
+      "entireName": "/exp", 
+      "counter": 58603, 
+      "children": [
+        {
+          "entireName": "/exp/B", 
+          "counter": 7351, 
+          "children": [
+            {
+              "entireName": "/exp/B/ping", 
+              "counter": 7351, 
+              "children": [
+                {
+                  "entireName": "/exp/B/ping/A", 
+                  "counter": 1200, 
+                  "name": "A", 
+                  "links": {
+                    "A-B": 1200
+                  }, 
+                  "self_counter": 1200
+                }, 
+                {
+                  "entireName": "/exp/B/ping/C", 
+                  "counter": 1217, 
+                  "name": "C", 
+                  "links": {
+                    "B-C": 1217
+                  }, 
+                  "self_counter": 1217
+                }, 
+                {
+                  "entireName": "/exp/B/ping/F", 
+                  "counter": 2476, 
+                  "name": "F", 
+                  "links": {
+                    "B-C": 1238, 
+                    "C-F": 1238
+                  }, 
+                  "self_counter": 2476
+                }, 
+                {
+                  "entireName": "/exp/B/ping/D", 
+                  "counter": 1226, 
+                  "name": "D", 
+                  "links": {
+                    "B-D": 1226
+                  }, 
+                  "self_counter": 1226
+                }, 
+                {
+                  "entireName": "/exp/B/ping/E", 
+                  "counter": 1232, 
+                  "name": "E", 
+                  "links": {
+                    "B-E": 1232
+                  }, 
+                  "self_counter": 1232
+                }
+              ], 
+              "links": {
+                "B-C": 2455, 
+                "A-B": 1200, 
+                "C-F": 1238, 
+                "B-D": 1226, 
+                "B-E": 1232
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "B-C": 2455, 
+            "A-B": 1200, 
+            "C-F": 1238, 
+            "B-D": 1226, 
+            "B-E": 1232
+          }, 
+          "name": "B"
+        }, 
+        {
+          "entireName": "/exp/D", 
+          "counter": 9762, 
+          "children": [
+            {
+              "entireName": "/exp/D/ping", 
+              "counter": 9762, 
+              "children": [
+                {
+                  "entireName": "/exp/D/ping/A", 
+                  "counter": 2406, 
+                  "name": "A", 
+                  "links": {
+                    "A-B": 1202, 
+                    "B-D": 1204
+                  }, 
+                  "self_counter": 2406
+                }, 
+                {
+                  "entireName": "/exp/D/ping/B", 
+                  "counter": 1212, 
+                  "name": "B", 
+                  "links": {
+                    "B-D": 1212
+                  }, 
+                  "self_counter": 1212
+                }, 
+                {
+                  "entireName": "/exp/D/ping/C", 
+                  "counter": 2438, 
+                  "name": "C", 
+                  "links": {
+                    "C-F": 1218, 
+                    "D-F": 1220
+                  }, 
+                  "self_counter": 2438
+                }, 
+                {
+                  "entireName": "/exp/D/ping/E", 
+                  "counter": 2466, 
+                  "name": "E", 
+                  "links": {
+                    "E-F": 1233, 
+                    "D-F": 1233
+                  }, 
+                  "self_counter": 2466
+                }, 
+                {
+                  "entireName": "/exp/D/ping/F", 
+                  "counter": 1240, 
+                  "name": "F", 
+                  "links": {
+                    "D-F": 1240
+                  }, 
+                  "self_counter": 1240
+                }
+              ], 
+              "links": {
+                "C-F": 1218, 
+                "A-B": 1202, 
+                "D-F": 3693, 
+                "B-D": 2416, 
+                "E-F": 1233
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "C-F": 1218, 
+            "A-B": 1202, 
+            "D-F": 3693, 
+            "B-D": 2416, 
+            "E-F": 1233
+          }, 
+          "name": "D"
+        }, 
+        {
+          "entireName": "/exp/C", 
+          "counter": 9766, 
+          "children": [
+            {
+              "entireName": "/exp/C/ping", 
+              "counter": 9766, 
+              "children": [
+                {
+                  "entireName": "/exp/C/ping/A", 
+                  "counter": 2403, 
+                  "name": "A", 
+                  "links": {
+                    "B-C": 1202, 
+                    "A-B": 1201
+                  }, 
+                  "self_counter": 2403
+                }, 
+                {
+                  "entireName": "/exp/C/ping/B", 
+                  "counter": 1210, 
+                  "name": "B", 
+                  "links": {
+                    "B-C": 1210
+                  }, 
+                  "self_counter": 1210
+                }, 
+                {
+                  "entireName": "/exp/C/ping/D", 
+                  "counter": 2450, 
+                  "name": "D", 
+                  "links": {
+                    "C-F": 1224, 
+                    "D-F": 1226
+                  }, 
+                  "self_counter": 2450
+                }, 
+                {
+                  "entireName": "/exp/C/ping/E", 
+                  "counter": 2465, 
+                  "name": "E", 
+                  "links": {
+                    "C-F": 1232, 
+                    "E-F": 1233
+                  }, 
+                  "self_counter": 2465
+                }, 
+                {
+                  "entireName": "/exp/C/ping/F", 
+                  "counter": 1238, 
+                  "name": "F", 
+                  "links": {
+                    "C-F": 1238
+                  }, 
+                  "self_counter": 1238
+                }
+              ], 
+              "links": {
+                "B-C": 2412, 
+                "A-B": 1201, 
+                "E-F": 1233, 
+                "D-F": 1226, 
+                "C-F": 3694
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "B-C": 2412, 
+            "A-B": 1201, 
+            "E-F": 1233, 
+            "D-F": 1226, 
+            "C-F": 3694
+          }, 
+          "name": "C"
+        }, 
+        {
+          "entireName": "/exp/E", 
+          "counter": 9764, 
+          "children": [
+            {
+              "entireName": "/exp/E/ping", 
+              "counter": 9764, 
+              "children": [
+                {
+                  "entireName": "/exp/E/ping/A", 
+                  "counter": 2410, 
+                  "name": "A", 
+                  "links": {
+                    "A-B": 1204, 
+                    "B-E": 1206
+                  }, 
+                  "self_counter": 2410
+                }, 
+                {
+                  "entireName": "/exp/E/ping/B", 
+                  "counter": 1214, 
+                  "name": "B", 
+                  "links": {
+                    "B-E": 1214
+                  }, 
+                  "self_counter": 1214
+                }, 
+                {
+                  "entireName": "/exp/E/ping/C", 
+                  "counter": 2442, 
+                  "name": "C", 
+                  "links": {
+                    "C-F": 1220, 
+                    "E-F": 1222
+                  }, 
+                  "self_counter": 2442
+                }, 
+                {
+                  "entireName": "/exp/E/ping/D", 
+                  "counter": 2456, 
+                  "name": "D", 
+                  "links": {
+                    "E-F": 1228, 
+                    "D-F": 1228
+                  }, 
+                  "self_counter": 2456
+                }, 
+                {
+                  "entireName": "/exp/E/ping/F", 
+                  "counter": 1242, 
+                  "name": "F", 
+                  "links": {
+                    "E-F": 1242
+                  }, 
+                  "self_counter": 1242
+                }
+              ], 
+              "links": {
+                "C-F": 1220, 
+                "A-B": 1204, 
+                "E-F": 3692, 
+                "D-F": 1228, 
+                "B-E": 2420
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "C-F": 1220, 
+            "A-B": 1204, 
+            "E-F": 3692, 
+            "D-F": 1228, 
+            "B-E": 2420
+          }, 
+          "name": "E"
+        }, 
+        {
+          "entireName": "/exp/A", 
+          "counter": 12242, 
+          "children": [
+            {
+              "entireName": "/exp/A/ping", 
+              "counter": 12242, 
+              "children": [
+                {
+                  "entireName": "/exp/A/ping/B", 
+                  "counter": 1204, 
+                  "name": "B", 
+                  "links": {
+                    "A-B": 1204
+                  }, 
+                  "self_counter": 1204
+                }, 
+                {
+                  "entireName": "/exp/A/ping/C", 
+                  "counter": 2426, 
+                  "name": "C", 
+                  "links": {
+                    "B-C": 1214, 
+                    "A-B": 1212
+                  }, 
+                  "self_counter": 2426
+                }, 
+                {
+                  "entireName": "/exp/A/ping/D", 
+                  "counter": 2446, 
+                  "name": "D", 
+                  "links": {
+                    "A-B": 1222, 
+                    "B-D": 1224
+                  }, 
+                  "self_counter": 2446
+                }, 
+                {
+                  "entireName": "/exp/A/ping/E", 
+                  "counter": 2458, 
+                  "name": "E", 
+                  "links": {
+                    "A-B": 1228, 
+                    "B-E": 1230
+                  }, 
+                  "self_counter": 2458
+                }, 
+                {
+                  "entireName": "/exp/A/ping/F", 
+                  "counter": 3708, 
+                  "name": "F", 
+                  "links": {
+                    "B-C": 1236, 
+                    "A-B": 1236, 
+                    "C-F": 1236
+                  }, 
+                  "self_counter": 3708
+                }
+              ], 
+              "links": {
+                "B-C": 2450, 
+                "A-B": 6102, 
+                "C-F": 1236, 
+                "B-D": 1224, 
+                "B-E": 1230
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "B-C": 2450, 
+            "A-B": 6102, 
+            "C-F": 1236, 
+            "B-D": 1224, 
+            "B-E": 1230
+          }, 
+          "name": "A"
+        }, 
+        {
+          "entireName": "/exp/F", 
+          "counter": 9718, 
+          "children": [
+            {
+              "entireName": "/exp/F/ping", 
+              "counter": 9718, 
+              "children": [
+                {
+                  "entireName": "/exp/F/ping/A", 
+                  "counter": 3609, 
+                  "name": "A", 
+                  "links": {
+                    "B-C": 1204, 
+                    "A-B": 1202, 
+                    "C-F": 1203
+                  }, 
+                  "self_counter": 3609
+                }, 
+                {
+                  "entireName": "/exp/F/ping/B", 
+                  "counter": 2422, 
+                  "name": "B", 
+                  "links": {
+                    "B-C": 1212, 
+                    "C-F": 1210
+                  }, 
+                  "self_counter": 2422
+                }, 
+                {
+                  "entireName": "/exp/F/ping/C", 
+                  "counter": 1220, 
+                  "name": "C", 
+                  "links": {
+                    "C-F": 1220
+                  }, 
+                  "self_counter": 1220
+                }, 
+                {
+                  "entireName": "/exp/F/ping/D", 
+                  "counter": 1230, 
+                  "name": "D", 
+                  "links": {
+                    "D-F": 1230
+                  }, 
+                  "self_counter": 1230
+                }, 
+                {
+                  "entireName": "/exp/F/ping/E", 
+                  "counter": 1237, 
+                  "name": "E", 
+                  "links": {
+                    "E-F": 1237
+                  }, 
+                  "self_counter": 1237
+                }
+              ], 
+              "links": {
+                "B-C": 2416, 
+                "A-B": 1202, 
+                "E-F": 1237, 
+                "D-F": 1230, 
+                "C-F": 3633
+              }, 
+              "name": "ping"
+            }
+          ], 
+          "links": {
+            "B-C": 2416, 
+            "A-B": 1202, 
+            "E-F": 1237, 
+            "D-F": 1230, 
+            "C-F": 3633
+          }, 
+          "name": "F"
+        }
+      ], 
+      "links": {
+        "B-C": 9733, 
+        "E-F": 7395, 
+        "B-D": 4866, 
+        "D-F": 7377, 
+        "B-E": 4882, 
+        "C-F": 12239, 
+        "A-B": 12111
+      }, 
+      "name": "exp"
+    }
+  ]
+}

@@ -1,0 +1,394 @@
+{
+  "nodes": [
+    {
+      "group": 2, 
+      "name": "unibas"
+    }, 
+    {
+      "group": 3, 
+      "name": "bupt"
+    }, 
+    {
+      "group": 4, 
+      "name": "pku"
+    }, 
+    {
+      "group": 5, 
+      "name": "tongji"
+    }, 
+    {
+      "group": 6, 
+      "name": "orange"
+    }, 
+    {
+      "group": 7, 
+      "name": "arizona"
+    }, 
+    {
+      "group": 8, 
+      "name": "byu"
+    }, 
+    {
+      "group": 9, 
+      "name": "csu"
+    }, 
+    {
+      "group": 10, 
+      "name": "uiuc"
+    }, 
+    {
+      "group": 11, 
+      "name": "memphis"
+    }, 
+    {
+      "group": 12, 
+      "name": "neu"
+    }, 
+    {
+      "group": 13, 
+      "name": "uci"
+    }, 
+    {
+      "group": 14, 
+      "name": "ucla"
+    }, 
+    {
+      "group": 15, 
+      "name": "remap"
+    }, 
+    {
+      "group": 16, 
+      "name": "umich"
+    }, 
+    {
+      "group": 17, 
+      "name": "wustl"
+    }, 
+    {
+      "group": 18, 
+      "name": "urjc"
+    }, 
+    {
+      "group": 19, 
+      "name": "systemx"
+    }, 
+    {
+      "group": 20, 
+      "name": "lip6"
+    }, 
+    {
+      "group": 21, 
+      "name": "waseda"
+    }, 
+    {
+      "group": 22, 
+      "name": "anyang"
+    }, 
+    {
+      "group": 23, 
+      "name": "caida"
+    }
+  ], 
+  "links": [
+    {
+      "delay": 127, 
+      "source": 2, 
+      "target": 0, 
+      "name": "pku-unibas"
+    }, 
+    {
+      "delay": 9, 
+      "source": 16, 
+      "target": 0, 
+      "name": "urjc-unibas"
+    }, 
+    {
+      "delay": 14, 
+      "source": 1, 
+      "target": 2, 
+      "name": "bupt-pku"
+    }, 
+    {
+      "delay": 38, 
+      "source": 20, 
+      "target": 2, 
+      "name": "anyang-pku"
+    }, 
+    {
+      "delay": 85, 
+      "source": 12, 
+      "target": 2, 
+      "name": "ucla-pku"
+    }, 
+    {
+      "delay": 14, 
+      "source": 2, 
+      "target": 3, 
+      "name": "pku-tongji"
+    }, 
+    {
+      "delay": 18, 
+      "source": 1, 
+      "target": 3, 
+      "name": "bupt-tongji"
+    }, 
+    {
+      "delay": 54, 
+      "source": 20, 
+      "target": 3, 
+      "name": "anyang-tongji"
+    }, 
+    {
+      "delay": 144, 
+      "source": 19, 
+      "target": 4, 
+      "name": "waseda-orange"
+    }, 
+    {
+      "delay": 56, 
+      "source": 9, 
+      "target": 4, 
+      "name": "memphis-orange"
+    }, 
+    {
+      "delay": 15, 
+      "source": 16, 
+      "target": 4, 
+      "name": "urjc-orange"
+    }, 
+    {
+      "delay": 3, 
+      "source": 18, 
+      "target": 4, 
+      "name": "lip6-orange"
+    }, 
+    {
+      "delay": 18, 
+      "source": 0, 
+      "target": 4, 
+      "name": "unibas-orange"
+    }, 
+    {
+      "delay": 25, 
+      "source": 21, 
+      "target": 5, 
+      "name": "caida-arizona"
+    }, 
+    {
+      "delay": 75, 
+      "source": 19, 
+      "target": 5, 
+      "name": "waseda-arizona"
+    }, 
+    {
+      "delay": 25, 
+      "source": 13, 
+      "target": 5, 
+      "name": "remap-arizona"
+    }, 
+    {
+      "delay": 30, 
+      "source": 6, 
+      "target": 5, 
+      "name": "byu-arizona"
+    }, 
+    {
+      "delay": 18, 
+      "source": 7, 
+      "target": 5, 
+      "name": "csu-arizona"
+    }, 
+    {
+      "delay": 8, 
+      "source": 7, 
+      "target": 6, 
+      "name": "csu-byu"
+    }, 
+    {
+      "delay": 16, 
+      "source": 12, 
+      "target": 7, 
+      "name": "ucla-csu"
+    }, 
+    {
+      "delay": 16, 
+      "source": 13, 
+      "target": 7, 
+      "name": "remap-csu"
+    }, 
+    {
+      "delay": 9, 
+      "source": 15, 
+      "target": 8, 
+      "name": "wustl-uiuc"
+    }, 
+    {
+      "delay": 14, 
+      "source": 7, 
+      "target": 8, 
+      "name": "csu-uiuc"
+    }, 
+    {
+      "delay": 17, 
+      "source": 15, 
+      "target": 9, 
+      "name": "wustl-memphis"
+    }, 
+    {
+      "delay": 17, 
+      "source": 5, 
+      "target": 9, 
+      "name": "arizona-memphis"
+    }, 
+    {
+      "delay": 21, 
+      "source": 9, 
+      "target": 10, 
+      "name": "memphis-neu"
+    }, 
+    {
+      "delay": 112, 
+      "source": 2, 
+      "target": 10, 
+      "name": "pku-neu"
+    }, 
+    {
+      "delay": 14, 
+      "source": 14, 
+      "target": 10, 
+      "name": "umich-neu"
+    }, 
+    {
+      "delay": 3, 
+      "source": 21, 
+      "target": 11, 
+      "name": "caida-uci"
+    }, 
+    {
+      "delay": 3, 
+      "source": 21, 
+      "target": 12, 
+      "name": "caida-ucla"
+    }, 
+    {
+      "delay": 1, 
+      "source": 11, 
+      "target": 12, 
+      "name": "uci-ucla"
+    }, 
+    {
+      "delay": 1, 
+      "source": 12, 
+      "target": 13, 
+      "name": "ucla-remap"
+    }, 
+    {
+      "delay": 1, 
+      "source": 11, 
+      "target": 13, 
+      "name": "uci-remap"
+    }, 
+    {
+      "delay": 9, 
+      "source": 6, 
+      "target": 13, 
+      "name": "byu-remap"
+    }, 
+    {
+      "delay": 5, 
+      "source": 8, 
+      "target": 14, 
+      "name": "uiuc-umich"
+    }, 
+    {
+      "delay": 15, 
+      "source": 7, 
+      "target": 14, 
+      "name": "csu-umich"
+    }, 
+    {
+      "delay": 12, 
+      "source": 9, 
+      "target": 14, 
+      "name": "memphis-umich"
+    }, 
+    {
+      "delay": 69, 
+      "source": 18, 
+      "target": 14, 
+      "name": "lip6-umich"
+    }, 
+    {
+      "delay": 33, 
+      "source": 5, 
+      "target": 15, 
+      "name": "arizona-wustl"
+    }, 
+    {
+      "delay": 86, 
+      "source": 15, 
+      "target": 16, 
+      "name": "wustl-urjc"
+    }, 
+    {
+      "delay": 2, 
+      "source": 4, 
+      "target": 17, 
+      "name": "orange-systemx"
+    }, 
+    {
+      "delay": 10, 
+      "source": 0, 
+      "target": 17, 
+      "name": "unibas-systemx"
+    }, 
+    {
+      "delay": 2, 
+      "source": 18, 
+      "target": 17, 
+      "name": "lip6-systemx"
+    }, 
+    {
+      "delay": 15, 
+      "source": 16, 
+      "target": 18, 
+      "name": "urjc-lip6"
+    }, 
+    {
+      "delay": 18, 
+      "source": 0, 
+      "target": 18, 
+      "name": "unibas-lip6"
+    }, 
+    {
+      "delay": 48, 
+      "source": 1, 
+      "target": 19, 
+      "name": "bupt-waseda"
+    }, 
+    {
+      "delay": 98, 
+      "source": 3, 
+      "target": 19, 
+      "name": "tongji-waseda"
+    }, 
+    {
+      "delay": 22, 
+      "source": 20, 
+      "target": 19, 
+      "name": "anyang-waseda"
+    }, 
+    {
+      "delay": 33, 
+      "source": 1, 
+      "target": 20, 
+      "name": "bupt-anyang"
+    }, 
+    {
+      "delay": 93, 
+      "source": 3, 
+      "target": 21, 
+      "name": "tongji-caida"
+    }
+  ]
+}

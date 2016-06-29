@@ -1,0 +1,72 @@
+{
+  "nodes": [
+    {
+      "group": 2, 
+      "name": "A"
+    }, 
+    {
+      "group": 3, 
+      "name": "B"
+    }, 
+    {
+      "group": 4, 
+      "name": "C"
+    }, 
+    {
+      "group": 5, 
+      "name": "D"
+    }, 
+    {
+      "group": 6, 
+      "name": "E"
+    }, 
+    {
+      "group": 7, 
+      "name": "F"
+    }
+  ], 
+  "links": [
+    {
+      "delay": 14, 
+      "source": 0, 
+      "target": 1, 
+      "name": "A-B"
+    }, 
+    {
+      "delay": 127, 
+      "source": 1, 
+      "target": 2, 
+      "name": "B-C"
+    }, 
+    {
+      "delay": 14, 
+      "source": 1, 
+      "target": 3, 
+      "name": "B-D"
+    }, 
+    {
+      "delay": 33, 
+      "source": 1, 
+      "target": 4, 
+      "name": "B-E"
+    }, 
+    {
+      "delay": 18, 
+      "source": 2, 
+      "target": 5, 
+      "name": "C-F"
+    }, 
+    {
+      "delay": 54, 
+      "source": 3, 
+      "target": 5, 
+      "name": "D-F"
+    }, 
+    {
+      "delay": 48, 
+      "source": 4, 
+      "target": 5, 
+      "name": "E-F"
+    }
+  ]
+}

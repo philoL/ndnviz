@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+
+
+
+    <style>
+    html, body{
+      height: 100%;
+    }
+
+
+
+    .packet-node rect {
+      cursor: pointer;
+      fill: #B0B0B0 ;
+    }
+    .packet-node text {
+      cursor: pointer;
+    }
+
+
+    .control-rect {
+      cursor: pointer;
+      fill: Transparent;
+    }
+
+    .name-rect {
+      cursor: pointer;
+      fill: #fff;
+      fill-opacity: .5;
+      stroke: #3182bd;
+      stroke-width: 1.5px;
+    }
+
+
+    .name-tree-node text {
+      font: 13px sans-serif;
+      pointer-events: none;
+    }
+
+    .name-tree-link {
+      fill: none;
+      stroke: #9ecae1;
+      stroke-width: 1.5px;
+    }
+
+    .graph-node circle {
+      stroke: #fff;
+      stroke-width: 1.5px;
+    }
+
+    .graph-node text {
+    stroke:#333;
+    cursos:pointer;
+    }
+    .graph-link {
+      cursor: pointer;
+      stroke: #ADD8E6;
+      stroke-opacity: 0.8;
+    }
+    </style>
+
+   
+
+  </head>
+
+  <body>
+
+  <div style="position: absolute; top: 0em; left: 0em" id="pan-select">
+    <div class="vis-pane-bg" style="width: 17em">
+
+      <div id="reset">Reset: 
+        <span style="float: right"> [<a href="#" id="option-reset" onclick="resetGraph()" >Reset</a>] 
+        </span>
+      </div>
+
+      <div id="node-radius" style="margin-top:.8em">
+        Node radius: <span style="float: right">[<a href="#" id="bigger">Bigger</a>] [<a href="#" id="smaller">Smaller</a>]</span>
+      </div>
+
+      <div id="link-width" style="margin-top:.8em">
+        Link width: <span style="float: right">[<a href="#" id="thicker">Thicker</a>] [<a href="#" id="thinner">Thinner</a>]</span>
+      </div>
+      
+    </div>
+  </div>
+ 
+
+
+  <script src="/js/d3.v3.js"></script>
+  <script src="/js/custom.js"></script>   
+</html>
