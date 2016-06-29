@@ -62,17 +62,62 @@
     }
     </style>
 
-   
+
 
   </head>
 
   <body>
 
-  <div style="position: absolute; top: 0em; left: 0em" id="pan-select">
+
+  <div id="legend"
+       style="position: absolute;
+              top: 5em;
+              left: 1em;
+              height:500px;
+              width:80px;
+              overflow-y: scroll;">
+
+  </div>
+
+  <div id="topology"
+       style="position: absolute;
+              top: 0em; left: 0em;
+              height:450px;
+              width:800px;
+              overflow-y: scroll;
+              overflow-x: scroll;
+              border-style: solid;
+              border-color: #B22222;">
+  </div>
+
+  <div id="name"
+       style="position: absolute;
+              top: 0em; left: 800px;
+              height:450px;
+              width:200px;
+              overflow-y: scroll;
+              overflow-x: scroll;
+              border-style: solid;
+              border-color: #B22222;">
+  </div>
+
+  <div id="packet"
+       style="position: absolute;
+              top: 0em; left: 1000px;
+              height:450px;
+              width:200px;
+              overflow-y: scroll;
+              overflow-x: scroll;
+              border-style: solid;
+              border-color: #B22222;">
+
+  </div>
+
+  <div style="position: absolute; top: 0.5em; left: 0.5em" id="pan-select">
     <div class="vis-pane-bg" style="width: 17em">
 
-      <div id="reset">Reset: 
-        <span style="float: right"> [<a href="#" id="option-reset" onclick="resetGraph()" >Reset</a>] 
+      <div id="reset">Reset:
+        <span style="float: right"> [<a href="#" id="option-reset" onclick="resetGraph()" >Reset</a>]
         </span>
       </div>
 
@@ -83,12 +128,10 @@
       <div id="link-width" style="margin-top:.8em">
         Link width: <span style="float: right">[<a href="#" id="thicker">Thicker</a>] [<a href="#" id="thinner">Thinner</a>]</span>
       </div>
-      
+
     </div>
   </div>
- 
-
 
   <script src="/js/d3.v3.js"></script>
-  <script src="/js/custom.js"></script>   
+  <script src="/js/custom.js"></script>
 </html>

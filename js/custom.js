@@ -9,8 +9,8 @@ var packet_svg_width_percentage = "25%",
 
 
 //for force in graph svg
-var force_width = 650,
-    force_height = 600;
+var force_width = 750,
+    force_height = 500;
 
 //node radius and link width
 var var_node_radius = 6;
@@ -19,21 +19,21 @@ var var_link_width = 3;
 var color = d3.scale.category20();
 
 
-//force width and height need to be manually configured       
+//force width and height need to be manually configured
 var force = d3.layout.force()
     .charge(-120)
     .linkDistance(200)
     .size([force_width, force_height]);
 
-var legend_svg = d3.select("body").append("svg")
+var legend_svg = d3.select("#legend").append("svg")
     .attr("class","legend-svg")
     .attr("width", 80)
-    .attr("height", name_svg_height_percentage)
+    .attr("height", 600)
 
-var graph_svg = d3.select("body").append("svg")
+var graph_svg = d3.select("#topology").append("svg")
     .attr("class","graph-svg")
-    .attr("width", graph_svg_width_percentage)
-    .attr("height", graph_svg_height_percentage);
+    .attr("width", 1000)
+    .attr("height", 600);
 
 var fixedNodes = [];
 
@@ -72,7 +72,7 @@ d3.json("/data/6nodes.json", function(error, graph) {
       d.px += d3.event.dx;
       d.py += d3.event.dy;
       d.x += d3.event.dx;
-      d.y += d3.event.dy; 
+      d.y += d3.event.dy;
       tick(); // this is the key to make it work together with updating both px,py,x,y on d !
   }
 
@@ -127,8 +127,6 @@ d3.select("#smaller").on("click",radius_smaller);
 d3.select("#thicker").on("click",link_thicker);
 d3.select("#thinner").on("click",link_thinner);
 
-
-
 function radius_bigger(){
   if (var_node_radius < 16) var_node_radius = var_node_radius + 1;
   d3.selectAll("circle").attr("r",var_node_radius);
@@ -150,14 +148,14 @@ function link_thinner(){
 
 //for name svg & packet svg
 var name_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
-    name_svg_width = 300 - name_svg_margin.left - name_svg_margin.right,
-    name_svg_barHeight = 24,
-    name_svg_barWidth = name_svg_width * .4;
+    name_svg_width = 200 - name_svg_margin.left - name_svg_margin.right,
+    name_svg_barHeight = 20,
+    name_svg_barWidth = name_svg_width * .3;
 
 var packet_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
-    packet_svg_width = 330 - packet_svg_margin.left - packet_svg_margin.right,
-    packet_svg_barHeight = 24,
-    packet_svg_barWidth = packet_svg_width * .4;
+    packet_svg_width = 200 - packet_svg_margin.left - packet_svg_margin.right,
+    packet_svg_barHeight = 20,
+    packet_svg_barWidth = packet_svg_width * .3;
 
 var i = 0,
     duration = 400,
@@ -169,17 +167,17 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal()
   .projection(function(d) { return [d.y, d.x]; });
 
-var name_svg = d3.select("body").append("svg")
+var name_svg = d3.select("#name").append("svg")
     .attr("class","name-svg")
-    .attr("width", name_svg_width)
-    .attr("height", name_svg_height_percentage)
+    .attr("width", 500)
+    .attr("height", 1000)
   .append("g")
     .attr("transform", "translate(" + name_svg_margin.left + "," + name_svg_margin.top + ")");
 
-var packet_svg = d3.select("body").append("svg")
+var packet_svg = d3.select("#packet").append("svg")
     .attr("class","packet-svg")
-    .attr("width", packet_svg_width)
-    .attr("height", packet_svg_height_percentage )
+    .attr("width", 500)
+    .attr("height", 1000 )
   .append("g")
     .attr("transform", "translate(" + packet_svg_margin.left + "," + packet_svg_margin.top + ")");
 
@@ -189,7 +187,7 @@ function moveChildren(node) {
   node.expanded = false;
   if(node.children) {
       node.children.forEach(function(c) { moveChildren(c); });
-      
+
       if (node._children) {
           node._children = node._children.concat(node.children);
       } else {
@@ -217,7 +215,7 @@ d3.json("/data/ndndump-best-route.json", function(error, json) {
   update(root = json);
   packet_x_scale = d3.scale.linear()
                      .domain([0,root.counter])
-                     .range([0,300]);
+                     .range([0,300*0.3]);
   var max = 0;
   for (var k in root.links) {
     if (root.links[k] > max){
@@ -240,7 +238,7 @@ d3.json("/data/ndndump-best-route.json", function(error, json) {
       .attr("width", 15)
       .attr("height", 1)
       .attr("x", 50)
-      .attr("y", function(d){return d+200;} );
+      .attr("y", function(d){return d+100;} );
 
   //ticks of color legend
 
@@ -248,7 +246,7 @@ d3.json("/data/ndndump-best-route.json", function(error, json) {
 
   d3.select(".legend-svg") // or something else that selects the SVG element in your visualizations
       .append("g") // create a group node
-      .attr("transform", "translate(50, 201)")
+      .attr("transform", "translate(50, 101)")
       .call(yLegendAxis); // call the axis generator
 
 });
@@ -332,7 +330,6 @@ function update(source) {
       .attr("y", -packet_svg_barHeight / 2)
       .attr("height", packet_svg_barHeight)
       .attr("width", function(d){
-        
         return packet_x_scale(d.counter);
       })
       .attr("class", "packet-rect")
@@ -376,7 +373,7 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + 0 + "," + d.x + ")"; })
       .style("opacity", 1)
     .select(".packet-rect")
-      .attr("width", function(d){ 
+      .attr("width", function(d){
         return packet_x_scale(d.counter);
       })
       .style("fill", packet_color);
@@ -402,7 +399,7 @@ function update(source) {
       .attr("class", "name-tree-link")
       .attr("d", function(d) {
         var o = {x: source.x0, y: source.y0};
-       
+
         return diagonal({source: o, target: o});
       })
     .transition()
@@ -432,7 +429,7 @@ function update(source) {
 }
 // Toggle children on name-rect click.
 function name_click(d){
-  console.log(d);
+  // console.log(d);
 
   if (d._children) {
     if (d.expanded) {
@@ -454,8 +451,8 @@ function name_click(d){
       //           console.log(d);
       //           console.log(child.links[d]);
       //           if (child.links[d] == undefined) {isFound = false;}
-      //         }) 
-         
+      //         })
+
       //         if (isFound) {
       //           console.log(d);
       //           if (d.children) {d.children.push(child);}
@@ -474,7 +471,7 @@ function name_click(d){
 
  // d3.selectAll(".control-text")
  //  .text(function(d){
- //    return d.children ? "-" : d._children? "+" : " "; 
+ //    return d.children ? "-" : d._children? "+" : " ";
  //  });
 }
 
@@ -581,7 +578,7 @@ function packet_click(d) {
           d3.select('#'+k)
             .style("stroke",color1(d.links[k]));
         }
-      } 
+      }
 
     });
 

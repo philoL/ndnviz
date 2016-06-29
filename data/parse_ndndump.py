@@ -6,14 +6,6 @@ import os
 """
 This file is to convert ndndump format to json format
 so that d3 can easily use
-var link_data_file_name = {
-  'A-B' : 1,
-  'B-C' : 10,
-  'B-D' : 100,
-  'B-E' : 1000,
-  'C-F' : 10000,
-  'D-F' : 100000,
-  'E-F' : 1000000
 }
 """
 if len(sys.argv) < 2:
@@ -27,7 +19,7 @@ Parse each file with .ndndump in the input directory
 into nameTreeDict
 """
 nameTreeDict = dict(name="/", counter=0, children=[], links = {}, entireName="/",self_counter=0)
- 
+
 for filename in os.listdir(inputDirectory):
     if "ndndump" in filename:
         inputFile = open(os.path.join(inputDirectory, filename),"r")
@@ -40,9 +32,9 @@ for filename in os.listdir(inputDirectory):
             except:
                 continue
             if pktType == "DATA:" or pktType == "INTEREST:":
-                name = eachLineList[9]
+                name = eachLineList[9].split("?")[0]
                 #skip last component for name tree only
-                components = name.split("/")[:-1]
+                components = name.split("/")
                 tmpChildren = nameTreeDict['children']
 
                 #print components
@@ -54,7 +46,7 @@ for filename in os.listdir(inputDirectory):
                         componentName = eachComponent
                         isFound = False
                         for (i,child) in enumerate(tmpChildren):
-                            #found the keyName, go the next level 
+                            #found the keyName, go the next level
                             if componentName == child['name']:
                                 isFound = True
                                 child['counter'] += 1
@@ -92,13 +84,13 @@ for filename in os.listdir(inputDirectory):
                                 newChild['links'][fileprefix] = 1
                                 tmpChildren.append(newChild)
                                 tmpChildren = sorted(tmpChildren, key=lambda k: k['name'])
-                            
+
                             else:
                                 newChild = dict(name=componentName,counter=1,children=[],links={},
                                     entireName=entireName)
                                 newChild['links'][fileprefix] = 1
                                 tmpChildren.append(newChild)
-                                tmpChildren = sorted(tmpChildren, key=lambda k: k['name'])   
+                                tmpChildren = sorted(tmpChildren, key=lambda k: k['name'])
                                 tmpChildren = newChild['children']
 
                         #print json.dumps(nameTreeDict, indent = 2)
@@ -110,13 +102,13 @@ for filename in os.listdir(inputDirectory):
                         else:
                             nameTreeDict['links'][fileprefix] += 1
 
-                        
+
             #other pkt types
             else:
                 print pktType
 
         inputFile.close()
-            
+
 outputJson = json.dumps(nameTreeDict, indent = 2)
 
 outputFileName = "ndndump.json"
