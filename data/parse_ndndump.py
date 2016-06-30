@@ -48,7 +48,8 @@ for filename in os.listdir(inputDirectory):
                 continue
 
             if pktType == "DATA:" or pktType == "INTEREST:":
-                name = eachLineList[9].split("?")[0]
+                packetUri = eachLineList[9].split("?")
+                name = packetUri[0]
                 components = name.split("/")
 
                 #incursively search from the first level
@@ -88,6 +89,7 @@ for filename in os.listdir(inputDirectory):
                                     else:
                                         child['children'] = []
                                         tmpChildren = child["children"]
+
                                 #is the leaf
                                 else:
                                     child['leaf_counter'] += 1
@@ -95,6 +97,15 @@ for filename in os.listdir(inputDirectory):
                                         child['links'][fileprefix] = 1
                                     else:
                                         child['links'][fileprefix] += 1
+
+                                    #add more info about the packets to the leaf
+                                    if pktType == "INTEREST:":
+                                        details = dict(type=pktType[:-1], link=fileprefix, timestamp=eachLineList[0],\
+                                            info=packetUri[1][:-1])
+                                    else:
+                                        details = dict(type=pktType[:-1], link=fileprefix, timestamp=eachLineList[0])
+
+                                    child['details'].append(details)
 
                                 break
 
@@ -106,7 +117,14 @@ for filename in os.listdir(inputDirectory):
                             #if this is the last component
                             if index == len(components)-1:
                                 newChild = dict(componentName=componentName,counter=1,links={},
-                                    leaf_counter=1,entireName=entireName)
+                                    leaf_counter=1,entireName=entireName,details=[])
+
+                                if pktType == "INTEREST:":
+                                    details = dict(type=pktType[:-1], link=fileprefix, timestamp=eachLineList[0],\
+                                        info=packetUri[1][:-1])
+                                else:
+                                    details = dict(type=pktType[:-1], link=fileprefix, timestamp=eachLineList[0])
+                                newChild['details'].append(details)
                                 newChild['links'][fileprefix] = 1
                                 tmpChildren.append(newChild)
                                 tmpChildren = sorted(tmpChildren, key=lambda k: k['componentName'])
