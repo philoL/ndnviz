@@ -15,39 +15,61 @@ else:
     inputDirectory = sys.argv[1]
 
 """
-Parse each file with .ndndump in the input directory
-into nameTreeDict
+Parse each file with .ndndump in the input directory to a nameTreeDict structure
+{
+    componentName:""
+    links:{}
+    leaf_counter:0
+    entireName:""
+    counter:0
+    children:[
+        nameTreeDict
+    ]
+}
+
 """
-nameTreeDict = dict(name="/", counter=0, children=[], links = {}, entireName="/",self_counter=0)
+nameTreeDict = dict(componentName="/", counter=0, children=[], links = {}, entireName="/",self_counter=0)
 
 for filename in os.listdir(inputDirectory):
+    print filename
     if "ndndump" in filename:
         inputFile = open(os.path.join(inputDirectory, filename),"r")
         fileprefix = filename.split('.')[0]
 
+        c=0
         for eachLine in inputFile:
+            c+=1
+            print c
+
             eachLineList = eachLine.split(" ")
             try:
                 pktType = eachLineList[8]
             except:
                 continue
+
             if pktType == "DATA:" or pktType == "INTEREST:":
                 name = eachLineList[9].split("?")[0]
-                #skip last component for name tree only
                 components = name.split("/")
+
+                #incursively search from the first level
                 tmpChildren = nameTreeDict['children']
 
-                #print components
                 for (index,eachComponent) in enumerate(components):
                     entireName = '/'.join(components[:index+1])
-                    #print index,eachComponent
+
                     #skip the first component - empty string
                     if eachComponent:
+                        if eachComponent[-1] == '\n':
+                            eachComponent=eachComponent[:-1]
+
                         componentName = eachComponent
                         isFound = False
+
                         for (i,child) in enumerate(tmpChildren):
+                            #print index, eachComponent, i, child['componentName'],componentName == child['componentName']
+
                             #found the keyName, go the next level
-                            if componentName == child['name']:
+                            if componentName == child['componentName']:
                                 isFound = True
                                 child['counter'] += 1
 
@@ -68,29 +90,33 @@ for filename in os.listdir(inputDirectory):
                                         tmpChildren = child["children"]
                                 #is the leaf
                                 else:
-                                    child['self_counter'] += 1
+                                    child['leaf_counter'] += 1
                                     if fileprefix not in child['links'].keys():
                                         child['links'][fileprefix] = 1
                                     else:
                                         child['links'][fileprefix] += 1
 
                                 break
+
+                            else:
+                                continue
+
                         #not found, add to the children
                         if isFound == False:
                             #if this is the last component
                             if index == len(components)-1:
-                                newChild = dict(name=componentName,counter=1,links={},
-                                    self_counter=1,entireName=entireName)
+                                newChild = dict(componentName=componentName,counter=1,links={},
+                                    leaf_counter=1,entireName=entireName)
                                 newChild['links'][fileprefix] = 1
                                 tmpChildren.append(newChild)
-                                tmpChildren = sorted(tmpChildren, key=lambda k: k['name'])
+                                tmpChildren = sorted(tmpChildren, key=lambda k: k['componentName'])
 
                             else:
-                                newChild = dict(name=componentName,counter=1,children=[],links={},
-                                    entireName=entireName)
+                                newChild = dict(componentName=componentName,counter=1,children=[],links={},
+                                    entireName=entireName,leaf_counter=0)
                                 newChild['links'][fileprefix] = 1
                                 tmpChildren.append(newChild)
-                                tmpChildren = sorted(tmpChildren, key=lambda k: k['name'])
+                                tmpChildren = sorted(tmpChildren, key=lambda k: k['componentName'])
                                 tmpChildren = newChild['children']
 
                         #print json.dumps(nameTreeDict, indent = 2)

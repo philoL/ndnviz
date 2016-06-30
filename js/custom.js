@@ -322,7 +322,7 @@ function update(source) {
       .attr("dy", 3.5)
       .attr("dx", 5.5)
       // .attr("transform", function(d) { return "translate(" + name_svg_barWidth/10 + "," + 0 + ")"; })
-      .text(function(d) { return d.name; });
+      .text(function(d) { return d.componentName; });
 
 
   //for packet svg nodes
