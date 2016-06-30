@@ -335,7 +335,7 @@ function update(source) {
       .attr("class", "packet-rect")
       // .attr("transform", function(d) { return "translate(" + packet_svg_barWidth/10 + "," + 0 + ")"; })
       .attr("chosen", false)
-      .style("fill", packet_color)
+      .style("fill", packet_rect_color)
       .on("click", packet_click)
       .on("mouseover", packet_mouseover)
       .on("mouseout", packet_mouseout);
@@ -346,6 +346,9 @@ function update(source) {
       .attr("dx", 5.5)
       // .attr("transform", function(d) { return "translate(" + name_svg_barWidth/10 + "," + 0 + ")"; })
       .text(function(d) { return d.entireName; })
+      .attr("class", "packet-text")
+      .attr("chosen", false)
+      .style("fill", packet_text_color)
       .on("click", packet_click)
       .on("mouseover", packet_mouseover)
       .on("mouseout", packet_mouseout);
@@ -372,11 +375,18 @@ function update(source) {
       .duration(duration)
       .attr("transform", function(d) { return "translate(" + 0 + "," + d.x + ")"; })
       .style("opacity", 1)
-    .select(".packet-rect")
+      .select(".packet-rect")
       .attr("width", function(d){
         return packet_x_scale(d.counter);
       })
-      .style("fill", packet_color);
+      .style("fill", packet_rect_color);
+
+  packet_node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + 0 + "," + d.x + ")"; })
+      .style("opacity", 1)
+      .select(".packet-text")
+      .style("fill", packet_text_color);
 
   // Transition exiting nodes to the parent's new position.
   node.exit().transition()
@@ -507,7 +517,7 @@ function link_click(d) {
   });
   if (inputFileName == 0) {inputFileName=1111111;}
   inputFileName = inputFileName+'.ndndump';
-  console.log(inputFileName);
+  // console.log(inputFileName);
 
   d3.json("/data/best-route-mnndn/ndndump-json/"+inputFileName, function(error, json) {
       if (error) throw error;
@@ -567,7 +577,6 @@ function packet_click(d) {
     d.chosen = true;
   }
 
-
   d3.selectAll(".graph-link")
     .style("stroke","#ADD8E6");
 
@@ -579,7 +588,6 @@ function packet_click(d) {
             .style("stroke",color1(d.links[k]));
         }
       }
-
     });
 
   update(root);
@@ -602,7 +610,13 @@ function packet_mouseout(d) {
 function name_color(d) {
   return d.expanded ? "#c6dbef" : d._children?  "#3182bd": "#fd8d3c";
 }
-function packet_color(d) {
+
+function packet_rect_color(d) {
   return d.chosen ? "FFFFCC" : "#B0B0B0";
+}
+
+function packet_text_color(d) {
+  // console.log(d);
+  return d.chosen ? "red" : "black";
 }
 
