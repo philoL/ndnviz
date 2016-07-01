@@ -220,7 +220,7 @@ var legend_data = [];
 var yLegendScale = d3.scale.linear().domain([15000,0]).range([0,200]);
 var yLegendAxis = d3.svg.axis().scale(yLegendScale);
 
-d3.json("/data/ndndump-best-route.json", function(error, json) {
+d3.json("data/ndndump-best-route.json", function(error, json) {
   if (error) throw error;
 
   json.x0 = 10;
@@ -570,7 +570,7 @@ function link_click(d) {
   inputFileName = inputFileName+'.ndndump';
   // console.log(inputFileName);
 
-  d3.json("/data/best-route-mnndn/ndndump-json/"+inputFileName, function(error, json) {
+  d3.json("data/best-route-mnndn/ndndump-json/"+inputFileName, function(error, json) {
       if (error) throw error;
 
       json.x0 = 10;
