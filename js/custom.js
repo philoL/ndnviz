@@ -157,7 +157,7 @@ var packet_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
     packet_svg_barHeight = 20,
     packet_svg_barWidth = packet_svg_width * .3;
 
-var details_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
+var details_svg_margin = {top: 0, right: 20, bottom: 30, left: 15},
     details_svg_width = 200 - details_svg_margin.left - details_svg_margin.right,
     details_svg_barHeight = 50,
     details_svg_barWidth = details_svg_width * .3;
@@ -188,10 +188,10 @@ var packet_svg = d3.select("#packet").append("svg")
 
 var details_svg = d3.select("#details").append("svg")
     .attr("class","details-svg")
-    .attr("width", 400)
-    .attr("height", 1000);
-    // .append("g")
-    // .attr("transform", "translate(" + details_svg_margin.left + "," + details_svg_margin.top + ")");
+    .attr("width", 550)
+    .attr("height", 1000)
+    .append("g")
+    .attr("transform", "translate(" + details_svg_margin.left + "," + details_svg_margin.top + ")");
 
 var chosen_node_details = [];
 
@@ -262,6 +262,8 @@ d3.json("data/ndndump-best-route.json", function(error, json) {
       .append("g") // create a group node
       .attr("transform", "translate(50, 101)")
       .call(yLegendAxis); // call the axis generator
+
+  update(root);
 
 });
 
