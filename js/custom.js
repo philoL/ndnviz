@@ -157,6 +157,11 @@ var packet_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
     packet_svg_barHeight = 20,
     packet_svg_barWidth = packet_svg_width * .3;
 
+var details_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
+    details_svg_width = 200 - details_svg_margin.left - details_svg_margin.right,
+    details_svg_barHeight = 50,
+    details_svg_barWidth = details_svg_width * .3;
+
 var i = 0,
     duration = 400,
     root;
@@ -178,8 +183,17 @@ var packet_svg = d3.select("#packet").append("svg")
     .attr("class","packet-svg")
     .attr("width", 500)
     .attr("height", 1000 )
-  .append("g")
+    .append("g")
     .attr("transform", "translate(" + packet_svg_margin.left + "," + packet_svg_margin.top + ")");
+
+var details_svg = d3.select("#details").append("svg")
+    .attr("class","details-svg")
+    .attr("width", 400)
+    .attr("height", 1000);
+    // .append("g")
+    // .attr("transform", "translate(" + details_svg_margin.left + "," + details_svg_margin.top + ")");
+
+var chosen_node_details = [];
 
 var packet_x_scale = d3.scale.linear();
 
@@ -265,6 +279,10 @@ function update(source) {
       .duration(duration)
       .attr("height", height);
 
+  d3.select(".details_svg").transition()
+      .duration(duration)
+      .attr("height", height);
+
   d3.select(self.frameElement).transition()
       .duration(duration)
       .style("height", height + "px");
@@ -281,6 +299,9 @@ function update(source) {
   var packet_node = packet_svg.selectAll("g.packet-node")
       .data(nodes, function(d) { return d.id || (d.id = ++i); });
 
+  var details_node = details_svg.selectAll("g.details-node")
+      .data(chosen_node_details);
+
   var nodeEnter = node.enter().append("g")
       .attr("class", "name-tree-node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
@@ -291,23 +312,12 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + 0 + "," + source.x0 + ")"; })
       .style("opacity", 1e-6);
 
+  var detailsNodeEnter = details_node.enter().append("g")
+      .attr("class", "details-node")
+      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .style("opacity", 1e-6);
+
   // Enter any new nodes at the parent's previous position.
-
-  // nodeEnter.append("text")
-  //     .attr("dy", 3.5)
-  //     .attr("dx", 5.5)
-  //     .attr("class", "control-text")
-  //     .text("+");
-
-  // nodeEnter.append("rect")
-  //     .attr("y", -name_svg_barHeight / 2)
-  //     .attr("height", name_svg_barHeight)
-  //     .attr("width", name_svg_barWidth / 10)
-  //     .attr("class", "control-rect")
-  //     .attr("chosen", false)
-  //     .style("fill", "transparent")
-  //     .on("click", name_click);
-
   nodeEnter.append("rect")
       .attr("y", -name_svg_barHeight / 2)
       .attr("height", name_svg_barHeight)
@@ -324,7 +334,6 @@ function update(source) {
       // .attr("transform", function(d) { return "translate(" + name_svg_barWidth/10 + "," + 0 + ")"; })
       .text(function(d) { return d.componentName; });
 
-
   //for packet svg nodes
   pakcetNodeEnter.append("rect")
       .attr("y", -packet_svg_barHeight / 2)
@@ -340,7 +349,6 @@ function update(source) {
       .on("mouseover", packet_mouseover)
       .on("mouseout", packet_mouseout);
 
-
   pakcetNodeEnter.append("text")
       .attr("dy", 3.5)
       .attr("dx", 5.5)
@@ -353,6 +361,36 @@ function update(source) {
       .on("mouseover", packet_mouseover)
       .on("mouseout", packet_mouseout);
 
+  // for details svg nodes
+  detailsNodeEnter.append("text")
+      // .attr("dy", 3.5)
+      // .attr("dx", 5.5)
+      .each(function (d,i) {
+          d3.select(this).append("tspan")
+            .text(function(d) { var result = (i+1).toString()+": "+d.type;
+                  return result;});
+
+          d3.select(this).append("tspan")
+            .attr("x","15px")
+            .attr("y","15px")
+            .text(function(d,i) { var result = "Timestamp: "+d.timestamp;
+                  return result;});
+
+          d3.select(this).append("tspan")
+            .attr("x","15px")
+            .attr("y","30px")
+            .text(function(d,i) { var result = "Link: "+d.link;
+                  return result;});
+          if (d.info){
+            d3.select(this).append("tspan")
+            .attr("x","15px")
+            .attr("y","45px")
+            .text(function(d,i) { var result = "More info: "+d.info;
+                  return result;});
+          }
+      });
+
+
   // Transition nodes to their new position.
   nodeEnter.transition()
       .duration(duration)
@@ -363,7 +401,7 @@ function update(source) {
       .duration(duration)
       .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
       .style("opacity", 1)
-    .select(".name-rect")
+      .select(".name-rect")
       .style("fill", name_color);
 
   pakcetNodeEnter.transition()
@@ -388,6 +426,12 @@ function update(source) {
       .select(".packet-text")
       .style("fill", packet_text_color);
 
+  detailsNodeEnter.transition()
+      .duration(duration)
+      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .style("opacity", 1)
+      .select(".details-text")
+
   // Transition exiting nodes to the parent's new position.
   node.exit().transition()
       .duration(duration)
@@ -400,6 +444,13 @@ function update(source) {
       .attr("transform", function(d) { return "translate(" + 0 + "," + source.x + ")"; })
       .style("opacity", 1e-6)
       .remove();
+
+  details_node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .style("opacity", 1e-6)
+      .remove();
+
   // Update the links…
   var link = name_svg.selectAll("path.name-tree-link")
       .data(tree.links(nodes), function(d) { return d.target.id; });
@@ -571,11 +622,23 @@ function link_click(d) {
 // Toggle graph svg on packet-rect click
 
 function packet_click(d) {
+  // console.log(d);
   if (d.chosen){
     d.chosen = false;
+    if (d.details){
+      chosen_node_details = chosen_node_details.filter(function(item) { return d.details.indexOf(item) === -1; });
+    }
   } else {
     d.chosen = true;
+    if (d.details){
+      chosen_node_details = chosen_node_details.concat(d.details);
+    }
   }
+
+  // details_svg.selectAll("g.details-node")
+  //     .data(chosen_node_details)
+  //     .enter()
+  //     .append("g");
 
   d3.selectAll(".graph-link")
     .style("stroke","#ADD8E6");
