@@ -270,16 +270,17 @@ function update(source) {
   var nodes = tree.nodes(root);
 
   var height = Math.max(500, nodes.length * name_svg_barHeight + name_svg_margin.top + name_svg_margin.bottom);
+  console.log(height);
 
-  d3.select(".name_svg").transition()
+  d3.select(".name-svg").transition()
       .duration(duration)
       .attr("height", height);
 
-  d3.select(".packet_svg").transition()
+  d3.select(".packet-svg").transition()
       .duration(duration)
       .attr("height", height);
 
-  d3.select(".details_svg").transition()
+  d3.select(".details-svg").transition()
       .duration(duration)
       .attr("height", height);
 
