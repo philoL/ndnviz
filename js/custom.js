@@ -37,7 +37,7 @@ var graph_svg = d3.select("#topology").append("svg")
 
 var fixedNodes = [];
 
-d3.json("/data/6nodes.json", function(error, graph) {
+d3.json("data/6nodes.json", function(error, graph) {
 
   if (error) throw error;
 
