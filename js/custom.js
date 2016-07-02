@@ -146,7 +146,7 @@ function link_thinner(){
 }
 
 
-//for name svg & packet svg
+//for svgs
 var name_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
     name_svg_width = 200 - name_svg_margin.left - name_svg_margin.right,
     name_svg_barHeight = 20,
@@ -157,10 +157,13 @@ var packet_svg_margin = {top: 30, right: 20, bottom: 30, left: 10},
     packet_svg_barHeight = 20,
     packet_svg_barWidth = packet_svg_width * .3;
 
-var details_svg_margin = {top: 0, right: 20, bottom: 30, left: 15},
+var timeline_svg_margin = {top: 50, right: 10, bottom: 30, left: 15},
+    timeline_svg_width = 700,
+    timeline_svg_height = 200;
+
+var details_svg_margin = {top: 15, right: 20, bottom: 30, left: 15},
     details_svg_width = 200 - details_svg_margin.left - details_svg_margin.right,
-    details_svg_barHeight = 50,
-    details_svg_barWidth = details_svg_width * .3;
+    details_svg_barHeight = 80;
 
 var i = 0,
     duration = 400,
@@ -172,6 +175,7 @@ var tree = d3.layout.tree()
 var diagonal = d3.svg.diagonal()
   .projection(function(d) { return [d.y, d.x]; });
 
+// define svgs
 var name_svg = d3.select("#name").append("svg")
     .attr("class","name-svg")
     .attr("width", 500)
@@ -186,10 +190,17 @@ var packet_svg = d3.select("#packet").append("svg")
     .append("g")
     .attr("transform", "translate(" + packet_svg_margin.left + "," + packet_svg_margin.top + ")");
 
+var timeline_svg = d3.select("#timeline").append("svg")
+    .attr("class","timeline-svg")
+    .attr("width", timeline_svg_width)
+    .attr("height", timeline_svg_height )
+    .append("g")
+    .attr("transform", "translate(" + timeline_svg_margin.left + "," + timeline_svg_margin.top + ")");
+
 var details_svg = d3.select("#details").append("svg")
     .attr("class","details-svg")
     .attr("width", 550)
-    .attr("height", 1000)
+    .attr("height", 550)
     .append("g")
     .attr("transform", "translate(" + details_svg_margin.left + "," + details_svg_margin.top + ")");
 
@@ -272,7 +283,6 @@ function update(source) {
   var nodes = tree.nodes(root);
 
   var height = Math.max(500, nodes.length * name_svg_barHeight + name_svg_margin.top + name_svg_margin.bottom);
-  console.log(height);
 
   d3.select(".name-svg").transition()
       .duration(duration)
@@ -317,7 +327,8 @@ function update(source) {
 
   var detailsNodeEnter = details_node.enter().append("g")
       .attr("class", "details-node")
-      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .attr("transform", function(d,i) { var x=i*details_svg_barHeight;
+        return "translate(" + 0 + "," + x + ")"; })
       .style("opacity", 1e-6);
 
   // Enter any new nodes at the parent's previous position.
@@ -370,24 +381,30 @@ function update(source) {
       // .attr("dx", 5.5)
       .each(function (d,i) {
           d3.select(this).append("tspan")
-            .text(function(d) { var result = (i+1).toString()+": "+d.type;
+            .text(function(d) { var result = (i+1).toString()+" Type: "+d.type;
                   return result;});
+
+         d3.select(this).append("tspan")
+           .attr("x","15px")
+           .attr("y","15px")
+           .text(function(d) { var result = "Name: "+d.entireName;
+              return result;});
 
           d3.select(this).append("tspan")
             .attr("x","15px")
-            .attr("y","15px")
+            .attr("y","30px")
             .text(function(d,i) { var result = "Timestamp: "+d.timestamp;
                   return result;});
 
           d3.select(this).append("tspan")
             .attr("x","15px")
-            .attr("y","30px")
+            .attr("y","45px")
             .text(function(d,i) { var result = "Link: "+d.link;
                   return result;});
           if (d.info){
             d3.select(this).append("tspan")
             .attr("x","15px")
-            .attr("y","45px")
+            .attr("y","60px")
             .text(function(d,i) { var result = "More info: "+d.info;
                   return result;});
           }
@@ -431,7 +448,8 @@ function update(source) {
 
   detailsNodeEnter.transition()
       .duration(duration)
-      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .attr("transform", function(d,i) { var x=i*details_svg_barHeight;
+        return "translate(" + 0 + "," + x + ")"; })
       .style("opacity", 1)
       .select(".details-text")
 
@@ -450,7 +468,8 @@ function update(source) {
 
   details_node.exit().transition()
       .duration(duration)
-      .attr("transform", function(d,i) { var x=i*70+15;return "translate(" + 0 + "," + x + ")"; })
+      .attr("transform", function(d,i) { var x=i*details_svg_barHeight;
+        return "translate(" + 0 + "," + x + ")"; })
       .style("opacity", 1e-6)
       .remove();
 
@@ -634,6 +653,9 @@ function packet_click(d) {
   } else {
     d.chosen = true;
     if (d.details){
+      for (each in d.details){
+        d.details[each].entireName=d.entireName;
+      }
       chosen_node_details = chosen_node_details.concat(d.details);
     }
   }
