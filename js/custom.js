@@ -332,61 +332,61 @@ function update(source) {
       .style("opacity", 1e-6);
 
   //update timeline section
-  var timeline_x_min,
-      timeline_x_max;
+ //  var timeline_x_min,
+ //      timeline_x_max;
 
-  if (chosen_node_details.length){
-    timeline_x_min = chosen_node_details[0].timestamp;
-    timeline_x_max = chosen_node_details[0].timestamp;
-    for (each in chosen_node_details) {
-      timeline_x_min = Math.min(chosen_node_details[each].timestamp, timeline_x_min);
-      timeline_x_max = Math.max(chosen_node_details[each].timestamp, timeline_x_max);
-    }
+ //  if (chosen_node_details.length){
+ //    timeline_x_min = chosen_node_details[0].timestamp;
+ //    timeline_x_max = chosen_node_details[0].timestamp;
+ //    for (each in chosen_node_details) {
+ //      timeline_x_min = Math.min(chosen_node_details[each].timestamp, timeline_x_min);
+ //      timeline_x_max = Math.max(chosen_node_details[each].timestamp, timeline_x_max);
+ //    }
 
 
-  var timeline_x = d3.scale.linear()
-          .domain([timeline_x_min-1, timeline_x_max+1])
-          .range([ 0, timeline_svg_width - timeline_svg_margin.left - timeline_svg_margin.right ]);
+ //  var timeline_x = d3.scale.linear()
+ //          .domain([timeline_x_min-1, timeline_x_max+1])
+ //          .range([ 0, timeline_svg_width - timeline_svg_margin.left - timeline_svg_margin.right ]);
 
-  var timeline_y = d3.scale.linear()
-          .domain([0, 2])
-          .range([timeline_svg_height-timeline_svg_margin.bottom, 0]);
+ //  var timeline_y = d3.scale.linear()
+ //          .domain([0, 2])
+ //          .range([timeline_svg_height-timeline_svg_margin.bottom, 0]);
 
- // draw the x axis
-  var timeline_xAxis = d3.svg.axis()
-  .scale(timeline_x)
-  .orient('bottom');
+ // // draw the x axis
+ //  var timeline_xAxis = d3.svg.axis()
+ //  .scale(timeline_x)
+ //  .orient('bottom');
 
-  timeline_svg.append('g')
-  .attr('transform', 'translate(20,' + (timeline_svg_height-timeline_svg_margin.bottom) + ')')
-  .attr('class', 'main axis date')
-  .call(timeline_xAxis);
+ //  timeline_svg.append('g')
+ //  .attr('transform', 'translate(20,' + (timeline_svg_height-timeline_svg_margin.bottom) + ')')
+ //  .attr('class', 'main axis date')
+ //  .call(timeline_xAxis);
 
-  // draw the y axis
-  var timeline_yAxis = d3.svg.axis()
-  .scale(timeline_y)
-  .orient('left');
+ //  // draw the y axis
+ //  var timeline_yAxis = d3.svg.axis()
+ //  .scale(timeline_y)
+ //  .orient('left');
 
-  timeline_svg.append('g')
-  .attr('transform', 'translate(20,0)')
-  .attr('class', 'main axis date')
-  .call(timeline_yAxis);
+ //  timeline_svg.append('g')
+ //  .attr('transform', 'translate(20,0)')
+ //  .attr('class', 'main axis date')
+ //  .call(timeline_yAxis);
 
-  var g = timeline_svg.append("g")
-          .attr('transform', 'translate(20,0)');
+ //  var g = timeline_svg.append("g")
+ //          .attr('transform', 'translate(20,0)');
 
-  g.selectAll("scatter-dots")
-    .data(chosen_node_details)
-    .enter()
-    .append("svg:circle")
-    .attr("cx", function (d,i) { return timeline_x(d.timestamp); } )
-    .attr("cy", timeline_y(1))
-    .attr("r", 4.5);
+ //  g.selectAll("scatter-dots")
+ //    .data(chosen_node_details)
+ //    .enter()
+ //    .append("svg:circle")
+ //    .attr("cx", function (d,i) { return timeline_x(d.timestamp); } )
+ //    .attr("cy", timeline_y(1))
+ //    .attr("r", 4.5);
 
-  } else {
-    timeline_x_min = 0;
-    timeline_x_max = 1;
-  }
+ //  } else {
+ //    timeline_x_min = 0;
+ //    timeline_x_max = 1;
+ //  }
 
   // Enter any new nodes at the parent's previous position.
   nodeEnter.append("rect")
