@@ -28,7 +28,7 @@ var force = d3.layout.force()
 var legend_svg = d3.select("#legend").append("svg")
     .attr("class","legend-svg")
     .attr("width", 80)
-    .attr("height", 600)
+    .attr("height", 500)
 
 var graph_svg = d3.select("#topology").append("svg")
     .attr("class","graph-svg")
@@ -282,7 +282,7 @@ function update(source) {
   // Compute the flattened node list. TODO use d3.layout.hierarchy.
   var nodes = tree.nodes(root);
 
-  var height = Math.max(500, nodes.length * name_svg_barHeight + name_svg_margin.top + name_svg_margin.bottom);
+  var height = Math.max(200, nodes.length * name_svg_barHeight + name_svg_margin.top + name_svg_margin.bottom);
 
   d3.select(".name-svg").transition()
       .duration(duration)
